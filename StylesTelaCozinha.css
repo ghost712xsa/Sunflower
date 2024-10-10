@@ -1,0 +1,66 @@
+/* Estilo para a imagem de fundo */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('Cozinha.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Mantém o fundo fixo ao rolar a página */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte infantil */
+}
+
+.RpgTextBox {
+    position: fixed;
+    bottom: 10px; /* Colado à parte inferior da tela */
+    left: 10px; /* Colado à parte esquerda da tela */
+    width: 90%; /* Responsivo - ocupa 90% da largura da tela */
+    max-width: 600px; /* Limite de largura para telas maiores */
+    padding: 20px;
+    background-color: white; /* Fundo branco */
+    border: 2px solid wihte; /* Borda branca */
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+    z-index: 1000;
+    overflow: hidden;
+    user-select: none;
+    cursor: move; /* Cursor de movimento */
+}
+
+.RpgText {
+    white-space: pre-wrap; /* Preserva quebras de linha */
+    overflow: hidden; /* Esconde o texto que ainda não foi digitado */
+}
+
+.ButtonGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.RpgButton {
+    padding: 10px 20px;
+    background-color: #f8e505; /* Cor de fundo amarela */
+    border: 5px solid white; 
+    border-radius: 90px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.RpgButton:hover {
+    transform: scale(1.1);
+}
+
+.RitaImage {
+    position: fixed;
+    bottom: 10px; /* Colado à parte inferior da tela */
+    right: 10px; /* Colado à parte direita da tela */
+    width: 15%; /* Responsivo - ocupa 15% da largura da tela */
+    max-width: 150px; /* Limite de largura para telas maiores */
+    height: auto;
+    cursor: move; /* Cursor de movimento */
+    z-index: 1000; /* Garante que a imagem esteja acima de outros elementos */
+}

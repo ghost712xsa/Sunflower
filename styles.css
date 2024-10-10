@@ -1,0 +1,114 @@
+body {
+    background-size: cover; /* Para a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    color: white; /* Ajusta a cor do texto para contrastar com o fundo */
+    margin: 0; /* Remove margens padrão do body */
+    height: 100vh; /* Garante que o body tenha 100% da altura da viewport */
+    overflow: hidden; /* Impede rolagem */
+    transition: background-image 0.5s ease; /* Transição suave entre os fundos */
+}
+
+.logo {
+    position: absolute; /* Permite posicionamento livre */
+    top: 20%; 
+    left: 50%; /* Posição inicial a 50% da largura */
+    transform: translate(-50%, -50%); /* Centraliza a imagem no ponto (50%, 50%) */
+    height: 260px; /* Altura da imagem do logo */
+    width: 260px; /* Largura da imagem do logo */
+}
+
+
+
+.placa {
+    position: absolute; /* Permite posicionamento livre */
+    top: 60%; 
+    left: 50%; /* Posição inicial a 50% da largura */
+    transform: translate(-50%, -50%); /* Centraliza a imagem no ponto (50%, 50%) */
+    height: 220px; /* Altura da imagem do logo */
+    width: 420px; /* Largura da imagem do logo */
+}
+.info {
+    position: absolute; /* Permite posicionamento livre */
+    top: 10%; 
+    left: 90%; 
+    transform: translate(-50%, -50%); /* Centraliza a imagem no ponto (50%, 50%) */
+    height: 60px; /* Altura da imagem do logo */
+    width: 60px; /* Largura da imagem do logo */
+}
+
+.theme-button {
+    position: absolute;
+    bottom: 20px;
+    left: 90%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border: none; /* Remove a borda */
+    background: transparent; /* Torna o fundo transparente */
+    background-size: contain; /* Ajusta a imagem ao tamanho do botão */
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: background-image 0.5s ease; /* Transição suave entre os temas */
+}
+
+.start-button {
+    position: absolute;
+    bottom: 10px;
+    left: 86%;
+    transform: translateX(-50%);
+    padding: 20px 40px;
+    font-size: 24px;
+    font-weight: bold;
+    color: black; /* Cor do texto preta */
+    background-color: #f8e505; /* Cor de fundo amarela */
+    border: 2px solid black; /* Borda preta */
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    animation: shake 0.5s infinite alternate;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte infantil */
+}
+
+.start-button:hover {
+    transform: scale(1.1);
+}
+
+@keyframes shake {
+    0% { transform: translate(-50%, -50%) rotate(-5deg); }
+    100% { transform: translate(-50%, -50%) rotate(5deg); }
+}
+/* Estilo para o pop-up */
+        .popup {
+            display: none; /* Escondido por padrão */
+            position: fixed; /* Fixo na tela */
+            top: 50%; /* Centralizado verticalmente */
+            left: 50%; /* Centralizado horizontalmente */
+            transform: translate(-50%, -50%); /* Ajusta a posição para centralizar */
+            background-color: rgba(79,79,79); /* Cinza meio transparente */
+            color: white; /* Texto branco */
+            padding: 20px; /* Espaçamento interno */
+            border-radius: 10px; /* Bordas arredondadas */
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte */
+            text-align: center; /* Centraliza o texto */
+            animation: fadeIn 0.5s; /* Animação de aparição */
+        }
+
+        /* Animação de fade-in */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Estilo para o botão de fechar */
+        .close-btn {
+            margin-top: 10px;
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }

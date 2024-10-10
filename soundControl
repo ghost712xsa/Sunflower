@@ -1,0 +1,30 @@
+// soundControl.js
+document.addEventListener("DOMContentLoaded", () => {
+    const soundButton = document.getElementById('soundButton');
+    const audioElements = document.querySelectorAll('audio'); // Seleciona todos os elementos de áudio
+
+    // Verifica se o som está desativado ao carregar a página
+    const isMuted = localStorage.getItem('isMuted') === 'true';
+
+    // Define o estado inicial do botão e dos áudios
+    if (isMuted) {
+        soundButton.classList.add('muted');
+        soundButton.textContent = 'Ativar Som';
+        audioElements.forEach(audio => audio.muted = true); // Mute todos os áudios
+    }
+
+    // Função para alternar o estado do som
+    function toggleSound() {
+        const currentlyMuted = soundButton.classList.toggle('muted');
+        soundButton.textContent = currentlyMuted ? 'Ativar Som' : 'Desativar Som';
+
+        // Salva o estado atual no localStorage
+        localStorage.setItem('isMuted', currentlyMuted);
+
+        // Atualiza o estado dos elementos de áudio
+        audioElements.forEach(audio => audio.muted = currentlyMuted);
+    }
+
+    // Adiciona o evento de clique ao botão
+    soundButton.addEventListener('click', toggleSound);
+});

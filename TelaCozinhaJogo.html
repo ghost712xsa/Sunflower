@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozinha</title>
+    <link rel="stylesheet" href="StylesJogo.css">
+</head>
+<body class="tela1">
+    <header>
+        <div class="button-container">
+            <a href="PrimeiraTela.html" class="button voltar">
+                <img src="BotãoVoltar.png" alt="Voltar">
+            </a>
+            <a href="segundaTela.html" class="button home">
+                <img src="BotãoHome.png" alt="Home">
+            </a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="images" id="leftImages">
+            <div class="image" data-id="1"><img src="Ovo.png" alt="Imagem 1"></div>
+            <div class="image" data-id="2"><img src="Melancia.png" alt="Imagem 2"></div>
+            <div class="image" data-id="3"><img src="Chocolate.png" alt="Imagem 3"></div>
+        </div>
+        <div class="images" id="rightImages">
+            <div class="image" data-id="3"><img src="FormaRetangulo2.png" alt="Imagem 1"></div>
+            <div class="image" data-id="2"><img src="FormaTriangulo.png" alt="Imagem 2"></div>
+            <div class="image" data-id="1"><img src="FormaOval.png" alt="Imagem 3"></div>
+        </div>
+    </div>
+    <!-- Popup para descoberta de formas -->
+    <div id="discoveryPopup">
+        <h2 id="discoveryMessage"></h2>
+    </div>
+
+    <!-- Popup final de conclusão -->
+    <div id="popup" class="message">
+        <h2 id="popupMessage"></h2>
+       <a href="TelaEscola.html"> <button id="continueButton">Continuar</button> </a>
+    </div>
+
+    <script src="ScriptJogo.js"></script>
+</body>
+</html>
