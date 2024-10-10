@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Áudio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .audio-button, .sound-button {
+            cursor: pointer;
+            width: 100px;
+            height: 100px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Botão de Desativar Narração -->
+        <div>
+            <img id="muteButton" class="audio-button" src="AudioAtivado.png" alt="Controle de Narração">
+            <p>Desativar Narração</p>
+        </div>
+
+        <!-- Botão de Desativar Sons Gerais -->
+        <div>
+            <img id="soundButton" class="sound-button" src="AudioAtivado.png" alt="Controle de Som Geral">
+            <p>Desativar Sons Gerais</p>
+        </div>
+    </div>
+
+    <script>
+        // Código para desativar a narração
+        const muteButton = document.getElementById('muteButton');
+        
+        // Carregar o estado do mute ao iniciar a página
+        window.addEventListener('load', () => {
+            const isMuted = localStorage.getItem('isMuted') === 'true';
+
+            // Atualiza a imagem do botão de áudio
+            muteButton.src = isMuted ? 'AudioDesativado.png' : 'AudioAtivado.png';
+        });
+
+        // Função para alternar o estado do mute
+        muteButton.addEventListener('click', () => {
+            const isMuted = localStorage.getItem('isMuted') === 'true';
+            const newMutedState = !isMuted;
+
+            localStorage.setItem('isMuted', newMutedState); // Armazena o estado
+            muteButton.src = newMutedState ? 'AudioDesativado.png' : 'AudioAtivado.png'; // Atualiza a imagem
+        });
+
+        // Código para desativar os sons gerais
+        const soundButton = document.getElementById('soundButton');
+        let areSoundsMuted = false;
+
+        soundButton.addEventListener('click', () => {
+            areSoundsMuted = !areSoundsMuted;
+
+            // Atualiza a imagem do botão de sons gerais
+            soundButton.src = areSoundsMuted ? 'AudioDesativado.png' : 'AudioAtivado.png';
+
+            // Ação de desativar todos os sons do site
+            if (areSoundsMuted) {
+                // Pausar ou reduzir volumes dos sons do site
+                console.log('Sons gerais desativados');
+            } else {
+                // Restaurar o volume dos sons
+                console.log('Sons gerais ativados');
+            }
+        });
+    </script>
+
+</body>
+</html>
