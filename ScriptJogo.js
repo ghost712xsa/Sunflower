@@ -7,8 +7,27 @@ let correctPairs = 0;
 
 const notificationSound = new Audio('Notification.mp3');
 
-leftImages.forEach(img => img.addEventListener('click', handleLeftClick));
-rightImages.forEach(img => img.addEventListener('click', handleRightClick));
+// Função para prevenir o comportamento duplo de touchstart + click
+function addTouchEventSupport(element, handler) {
+    let isTouching = false;
+
+    element.addEventListener('touchstart', function (e) {
+        isTouching = true; // Marcamos que estamos em um dispositivo com touch
+        handler(e);
+    });
+
+    element.addEventListener('click', function (e) {
+        if (!isTouching) {
+            handler(e);
+        }
+        isTouching = false; // Resetamos após o click para evitar futuros problemas
+    });
+}
+
+// Adicionando suporte a toque e click para as imagens da esquerda
+leftImages.forEach(img => addTouchEventSupport(img, handleLeftClick));
+// Adicionando suporte a toque e click para as imagens da direita
+rightImages.forEach(img => addTouchEventSupport(img, handleRightClick));
 
 function handleLeftClick(e) {
     if (!selectedLeftImage) {
