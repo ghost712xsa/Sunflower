@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('Floresta.png'); /* Substitua 'wallpaper.png' pelo caminho da sua imagem */
+    background-image: url('floresta.png'); /* Substitua 'wallpaper.png' pelo caminho da sua imagem */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
