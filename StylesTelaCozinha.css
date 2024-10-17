@@ -10,7 +10,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; /* Mantém o fundo fixo ao rolar a página */
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte infantil */
+    font-family: 'Patrick Hand'; /* Fonte infantil */
 }
 
 .RpgTextBox {
