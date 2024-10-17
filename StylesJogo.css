@@ -32,7 +32,7 @@ body.tela2 { background: url('Img/Piquenique.png') no-repeat center center fixed
 body.tela3 { background: url('Img/Esportes.png') no-repeat center center fixed; background-size: cover; }
 body.tela4 { background: url('Img/QuartoGamer.png') no-repeat center center fixed; background-size: cover; }
 body.tela5 { background: url('Img/QuartoBagunçado.png') no-repeat center center fixed; background-size: cover; }
-body.tela6 { background: url('Img/Floresta.png') no-repeat center center fixed; background-size: cover; }
+body.tela6 { background: url('Floresta.png') no-repeat center center fixed; background-size: cover; }
 body.tela7 { background: url('Img/Praia.png') no-repeat center center fixed; background-size: cover; }
 body.tela8 { background: url('Img/SalaDeAula.png') no-repeat center center fixed; background-size: cover; }
 body.tela9 { background: url('Img/Museu.png') no-repeat center center fixed; background-size: cover; }
