@@ -1,28 +1,31 @@
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: ; /* Adicione uma cor de fundo se necessário */
-  color: white;
-  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte usada: Comic Sans MS */
-  margin: 0;
-  padding: 0;
-  background: url('Projeto TCC (4).png') center no-repeat fixed; /* Ajusta a imagem para cobrir toda a área visível */
-  background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha o conteúdo no topo da tela */
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Cor de fundo padrão */
+    color: white;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte usada: Comic Sans MS */
+    margin: 0;
+    padding: 0;
+    background: url('Img/Projeto TCC (4).png') center no-repeat fixed; /* Ajusta a imagem para cobrir toda a área visível */
+    background-size: cover; /* Garante que a imagem cubra toda a tela */
 }
 
 h1 {
     margin-top: 20px;
 }
+
 .fase-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: grid; /* Usando grid layout */
+    grid-template-columns: repeat(3, 150px); /* Três colunas de 150px */
+    grid-gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza as fases */
     margin: 20px;
+    margin-top: 100px; /* Cria espaço entre o botão "Voltar" e as fases */
 }
+
 .fase {
     width: 150px;
     height: 150px;
@@ -35,27 +38,82 @@ h1 {
     text-decoration: none;
     color: black;
 }
+
 .fase img {
     width: 100px;
     height: 100px;
     object-fit: cover;
     border-radius: 5px;
 }
+
 .fase p {
     margin: 10px 0 0;
 }
+
 .fase:hover {
     background-color: #f0f0f0;
 }
+
 .back-button {
     position: absolute;
-    top: 20px;
+    top: 20px; /* Mantém o botão "Voltar" no topo da tela */
     left: 20px;
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
+
 .back-button img {
     width: 90px;
     height: 70px;
+}
+
+/* Ajuste para telas menores (orientação retrato) */
+@media (max-width: 768px) {
+    .fase-container {
+        grid-template-columns: repeat(2, 130px); /* Duas colunas em telas menores */
+        grid-gap: 15px; /* Diminui o espaço entre os elementos em telas menores */
+        margin-top: 80px; /* Cria espaço para o botão "Voltar" em telas menores */
+    }
+
+    .fase {
+        width: 130px;
+        height: 130px;
+    }
+
+    .fase img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .back-button img {
+        width: 70px;
+        height: 50px; /* Ajusta o tamanho do botão "Voltar" para telas menores */
+    }
+}
+
+/* Ajuste para telas em orientação retrato com mais altura */
+@media (max-height: 600px) {
+    .fase-container {
+        grid-template-columns: repeat(2, 120px); /* Mantém duas colunas em telas menores */
+    }
+
+    .fase {
+        width: 120px;
+        height: 120px;
+    }
+
+    .fase img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .back-button {
+        top: 15px; /* Adiciona espaçamento extra para o botão "Voltar" */
+    }
+
+    .back-button img {
+        width: 60px;
+        height: 40px;
+    }
 }
