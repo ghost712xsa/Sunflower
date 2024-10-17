@@ -1,3 +1,8 @@
+/* Adiciona a fonte Patrick Hand */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+
+
 /* Estilo para a imagem de fundo */
 body {
     margin: 0;
@@ -7,7 +12,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; /* Mantém o fundo fixo ao rolar a página */
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte infantil */
+    font-family: 'Patrick Hand'; /* Fonte infantil */
 }
 
 .RpgTextBox {
