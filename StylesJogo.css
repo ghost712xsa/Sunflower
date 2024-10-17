@@ -9,7 +9,7 @@ body.tela1 {
     justify-content: center;
     align-items: center;
     height: 100vh; /* Ocupa toda a altura da tela */
-    background: url('cozinha.png') no-repeat center center fixed;
+    background: url('Img/cozinha.png') no-repeat center center fixed;
     background-size: cover; /* Ajusta a imagem para cobrir toda a área visível */
 }
 
@@ -28,15 +28,15 @@ body.tela2, body.tela3, body.tela4, body.tela5, body.tela6, body.tela7, body.tel
 }
 
 /* Estilos específicos para cada tela */
-body.tela2 { background: url('Piquenique.png') no-repeat center center fixed; background-size: cover; }
-body.tela3 { background: url('Esportes.png') no-repeat center center fixed; background-size: cover; }
-body.tela4 { background: url('QuartoGamer.png') no-repeat center center fixed; background-size: cover; }
-body.tela5 { background: url('QuartoBagunçado.png') no-repeat center center fixed; background-size: cover; }
-body.tela6 { background: url('Floresta.png') no-repeat center center fixed; background-size: cover; }
-body.tela7 { background: url('Praia.png') no-repeat center center fixed; background-size: cover; }
-body.tela8 { background: url('SalaDeAula.png') no-repeat center center fixed; background-size: cover; }
-body.tela9 { background: url('Museu.png') no-repeat center center fixed; background-size: cover; }
-body.tela10 { background: url('Cidade.png') no-repeat center center fixed; background-size: cover; }
+body.tela2 { background: url('Img/Piquenique.png') no-repeat center center fixed; background-size: cover; }
+body.tela3 { background: url('Img/Esportes.png') no-repeat center center fixed; background-size: cover; }
+body.tela4 { background: url('Img/QuartoGamer.png') no-repeat center center fixed; background-size: cover; }
+body.tela5 { background: url('Img/QuartoBagunçado.png') no-repeat center center fixed; background-size: cover; }
+body.tela6 { background: url('Img/Floresta.png') no-repeat center center fixed; background-size: cover; }
+body.tela7 { background: url('Img/Praia.png') no-repeat center center fixed; background-size: cover; }
+body.tela8 { background: url('Img/SalaDeAula.png') no-repeat center center fixed; background-size: cover; }
+body.tela9 { background: url('Img/Museu.png') no-repeat center center fixed; background-size: cover; }
+body.tela10 { background: url('Img/Cidade.png') no-repeat center center fixed; background-size: cover; }
 
 /* Contêiner das imagens */
 .container {
@@ -170,8 +170,8 @@ header {
 }
 
 .button {
-    width: 80px;
-    height: 80px;
+    width: 100px; /* Define o tamanho fixo para o botão */
+    height: 100px; /* Define o tamanho fixo para o botão */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,37 +181,4 @@ header {
     width: 100%;
     height: auto;
     object-fit: contain;
-}
-
-/* Ajustes de responsividade */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px; /* Menor espaçamento em telas menores */
-    }
-
-    .images {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px; /* Ajusta o espaçamento entre imagens */
-    }
-
-    .button {
-        width: 30px;
-        height: 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    .image {
-        width: 80px; /* Ajusta o tamanho das imagens em telas pequenas */
-        height: 80px;
-    }
-}
-
-.message {
-    display: none; /* Inicialmente oculto */
-    /* Outros estilos para o popup */
 }
