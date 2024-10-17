@@ -5,7 +5,8 @@ let selectedRightImage = null;
 const totalPairs = 3;
 let correctPairs = 0;
 
-const notificationSound = new Audio('Notification.mp3');
+const notificationSound = new Audio('Notification.mp3'); // Som de acerto
+const errorSound = new Audio('error.mp3'); // Som de erro
 
 leftImages.forEach(img => img.addEventListener('click', handleLeftClick));
 rightImages.forEach(img => img.addEventListener('click', handleRightClick));
@@ -40,6 +41,7 @@ function checkMatch() {
         } else {
             selectedLeftImage.classList.add('error', 'tremble');
             selectedRightImage.classList.add('error', 'tremble');
+            errorSound.play(); // Tocar som de erro
             setTimeout(() => {
                 selectedLeftImage.classList.remove('error', 'tremble');
                 selectedRightImage.classList.remove('error', 'tremble');
@@ -66,7 +68,7 @@ function showDiscoveryPopup(message, callback = null) {
     const popup = document.getElementById('discoveryPopup');
     document.getElementById('discoveryMessage').textContent = message;
     popup.style.display = 'block';
-    notificationSound.play();
+    notificationSound.play(); // Tocar som de acerto
     setTimeout(() => {
         popup.style.display = 'none';
         if (callback) callback();
