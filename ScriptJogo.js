@@ -5,7 +5,7 @@ let selectedRightImage = null;
 const totalPairs = 3;
 let correctPairs = 0;
 
-const notificationSound = new Audio('Sons/Notification.mp3');
+const notificationSound = new Audio('Notification.mp3');
 
 leftImages.forEach(img => img.addEventListener('click', handleLeftClick));
 rightImages.forEach(img => img.addEventListener('click', handleRightClick));
