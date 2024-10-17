@@ -1,3 +1,6 @@
+/* Adiciona a fonte Patrick Hand */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 body {
     background-size: cover; /* Para a imagem cobrir toda a tela */
     background-position: center; /* Centraliza a imagem */
@@ -69,7 +72,7 @@ body {
     transition: transform 0.3s ease;
     animation: shake 0.5s infinite alternate;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte infantil */
+    font-family: 'Patrick Hand'; /* Fonte infantil */
 }
 
 .start-button:hover {
@@ -91,7 +94,7 @@ body {
             color: white; /* Texto branco */
             padding: 20px; /* Espaçamento interno */
             border-radius: 10px; /* Bordas arredondadas */
-            font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte */
+            font-family: 'Patrick Hand'; /* Fonte infantil */
             text-align: center; /* Centraliza o texto */
             animation: fadeIn 0.5s; /* Animação de aparição */
         }
