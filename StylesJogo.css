@@ -34,7 +34,7 @@ body.tela4 { background: url('Img/QuartoGamer.png') no-repeat center center fixe
 body.tela5 { background: url('Img/QuartoBagunçado.png') no-repeat center center fixed; background-size: cover; }
 body.tela6 { background: url('floresta.png') no-repeat center center fixed; background-size: cover; }
 body.tela7 { background: url('Img/Praia.png') no-repeat center center fixed; background-size: cover; }
-body.tela8 { background: url('Img/SalaDeAula.png') no-repeat center center fixed; background-size: cover; }
+body.tela8 { background: url('SalaDeAula.png') no-repeat center center fixed; background-size: cover; }
 body.tela9 { background: url('Img/Museu.png') no-repeat center center fixed; background-size: cover; }
 body.tela10 { background: url('Img/Cidade.png') no-repeat center center fixed; background-size: cover; }
 
