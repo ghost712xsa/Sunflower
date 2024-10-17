@@ -1,3 +1,6 @@
+/* Adiciona a fonte Patrick Hand */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 body {
     display: flex;
     flex-direction: column;
@@ -6,7 +9,7 @@ body {
     height: 100vh;
     background-color: #000; /* Cor de fundo padrão */
     color: white;
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte usada: Comic Sans MS */
+    font-family: 'Patrick Hand'; /* Fonte infantil */
     margin: 0;
     padding: 0;
     background: url('projeto TCC (4).png') center no-repeat fixed; /* Ajusta a imagem para cobrir toda a área visível */
