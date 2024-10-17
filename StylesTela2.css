@@ -1,3 +1,8 @@
+/* Adiciona a fonte Patrick Hand */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+
+
 body {
   display: flex;
   flex-direction: column;
@@ -6,7 +11,7 @@ body {
   height: 100vh;
   background-color: ; /* Adicione uma cor de fundo se necessário */
   color: white;
-  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte usada: Comic Sans MS */
+  font-family: 'Patrick Hand'; /* Fonte infantil */
   margin: 0;
   padding: 0;
   background: url('TelaDeFundo.png') center no-repeat fixed; /* Ajusta a imagem para cobrir toda a área visível */
@@ -72,7 +77,7 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
-  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte infantil */
+  font-family: 'Patrick Hand'; /* Fonte infantil */
 }
 
 .buttons button:hover {
