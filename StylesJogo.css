@@ -9,7 +9,7 @@ body.tela1 {
     justify-content: center;
     align-items: center;
     height: 100vh; /* Ocupa toda a altura da tela */
-    background: url('Img/cozinha.png') no-repeat center center fixed;
+    background: url('cozinha.png') no-repeat center center fixed;
     background-size: cover; /* Ajusta a imagem para cobrir toda a área visível */
 }
 
