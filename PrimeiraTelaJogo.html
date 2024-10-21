@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quarto</title>
     <link rel="stylesheet" href="StylesJogo.css">
-    <style>
+     <style>
         /* Estilo para a tela de carregamento */
         #loadingOverlay {
             position: fixed;
@@ -34,12 +34,9 @@
             100% { transform: rotate(360deg); }
         }
     </style>
+    
 </head>
 <body class="tela5">
-    <div id="loadingOverlay">
-        <div id="loadingSpinner"></div>
-    </div>
-    
     <header>
         <div class="button-container">
             <a href="SegundaTela.html" class="button voltar">
@@ -51,7 +48,7 @@
         </div>
     </header>
     <br><br><br>
-    <div class="container" style="display: none;">
+    <div class="container">
         <div class="images" id="leftImages">
             <div class="image" data-id="8"><img src="CasinhaDeBrinquedo.png" alt="Imagem 1"></div>
             <div class="image" data-id="7"><img src="Pipa.png" alt="Imagem 2"></div>
@@ -63,7 +60,7 @@
             <div class="image" data-id="8"><img src="FormaPentagono.png" alt="Imagem 3"></div>
         </div>
     </div>
-    <!-- Popup para descoberta de formas -->
+<!-- Popup para descoberta de formas -->
     <div id="discoveryPopup">
         <h2 id="discoveryMessage"></h2>
     </div>
@@ -71,9 +68,9 @@
     <!-- Popup final de conclusão -->
     <div id="popup" class="message">
         <h2 id="popupMessage"></h2>
-        <a href="TelaCozinha.html"> <button id="continueButton">Continuar</button> </a>
+       <a href="TelaCozinha.html"> <button id="continueButton">Continuar</button> </a>
     </div>
-    <script>
+     <script>
         // Função para verificar se todas as imagens estão carregadas
         window.onload = function() {
             // Ocultar a tela de carregamento
@@ -83,6 +80,7 @@
             document.querySelector('.container').style.display = 'block';
         };
     </script>
+    
     <script src="ScriptJogo.js"></script>
 </body>
 </html>
