@@ -29,18 +29,19 @@
             animation: spin 1s linear infinite; /* Animação de rotação */
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Esconder container até que as imagens sejam carregadas */
-        .container {
+        /* Esconder o conteúdo até o carregamento das imagens */
+        .RpgTextBox, .RitaAlegreImage {
             display: none;
         }
     </style>
 </head>
 <body>
+
+    <!-- Tela de carregamento -->
+    <div id="loadingOverlay">
+        <div id="loadingSpinner"></div>
+    </div>
+
     <div class="RpgTextBox" id="RpgTextBox">
         <div class="RpgText" id="RpgText"></div>
         <div class="ButtonGroup">
@@ -49,16 +50,17 @@
         </div>
     </div>
 
-    <img src="RitaAlegre.png" alt="RitaAlegre" class="RitaAlegreImage" id="RitaAlegreImage"> 
+    <img src="RitaAlegre.png" alt="RitaAlegre" class="RitaAlegreImage" id="RitaAlegreImage">
 
-     <script>
+    <script>
         // Função para verificar se todas as imagens estão carregadas
         window.onload = function() {
             // Ocultar a tela de carregamento
             document.getElementById('loadingOverlay').style.display = 'none';
 
-            // Exibir a container com as imagens
-            document.querySelector('.container').style.display = 'block';
+            // Exibir o conteúdo
+            document.querySelector('.RpgTextBox').style.display = 'block';
+            document.querySelector('.RitaAlegreImage').style.display = 'block';
         };
     </script>
 
