@@ -5,15 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela inicial</title>
     <link rel="stylesheet" href="StylesTela2.css">
+    <style>
+        /* Estilo para a tela de carregamento */
+        #loadingOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(128, 128, 128, 0.5); /* Cinza meio transparente */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Garantir que fique acima de outros elementos */
+        }
+
+        #loadingSpinner {
+            border: 8px solid rgba(255, 255, 255, 0.3);
+            border-top: 8px solid #f8e505; /* Cor do spinner */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite; /* Animação de rotação */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-    <a href="PrimeiraTela.html"><img src="Placajogar.png" class="PlacaJogar" alt="PlacaJogar"></a>
-    <a href="fases.html"><img src="PlacaFases.png" class="PlacaFases" alt="PlacaFases"></a>
-    <a href="tutorial.html"><img src="PlacaTutorial.png" class="PlacaTutorial" alt="PlacaTutorial"></a>
+    <div id="loadingOverlay">
+        <div id="loadingSpinner"></div>
+    </div>
+
+    <a href="PrimeiraTela.html"><img src="Placajogar.png" class="PlacaJogar" alt="PlacaJogar" style="display: none;"></a>
+    <a href="fases.html"><img src="PlacaFases.png" class="PlacaFases" alt="PlacaFases" style="display: none;"></a>
+    <a href="tutorial.html"><img src="PlacaTutorial.png" class="PlacaTutorial" alt="PlacaTutorial" style="display: none;"></a>
     
-    <img id="muteButton" class="audio-button" src="AudioAtivado.png" alt="Controle de Som"> <!-- Imagem para controlar o som -->
+    <img id="muteButton" class="audio-button" src="AudioAtivado.png" alt="Controle de Som" style="display: none;"> <!-- Imagem para controlar o som -->
 
     <script>
+        // Função para verificar se todas as imagens estão carregadas
+        window.onload = function() {
+            // Ocultar a tela de carregamento
+            document.getElementById('loadingOverlay').style.display = 'none';
+
+            // Exibir as imagens
+            document.querySelectorAll('img').forEach(img => {
+                img.style.display = 'block';
+            });
+        };
+
         const muteButton = document.getElementById('muteButton');
         
         // Carregar o estado do mute ao iniciar a página
