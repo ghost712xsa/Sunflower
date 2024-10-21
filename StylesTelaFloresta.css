@@ -57,6 +57,11 @@ body {
     transform: scale(1.1);
 }
 
+.ButtonGroup a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Usa a cor do texto do botão */
+}
+
 .RitaAventureiraImage {
     position: fixed;
     bottom: 10px; /* Colado à parte inferior da tela */
