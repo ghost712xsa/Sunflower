@@ -2,58 +2,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
 /* Estilo geral do corpo */
-body {
+body.tela1 {
     font-family: 'Patrick Hand'; /* Fonte infantil */
     text-align: center;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    background: url('cozinha.png') no-repeat center center fixed;
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área visível */
+}
+
+/* Estilo para outras telas */
+body.tela2, body.tela3, body.tela4, body.tela5, body.tela6, body.tela7, body.tela8, body.tela9, body.tela10 {
+    font-family: 'Patrick Hand'; /* Fonte infantil */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda a altura da tela */
     background-size: cover; /* Ajusta a imagem para cobrir toda a área visível */
 }
 
 /* Estilos específicos para cada tela */
-body.tela5 {
-    height: 100vh; /* Ocupa toda a altura da tela */
-    background: url('QuartoBagunçado.png') no-repeat center center fixed;
-}
+body.tela2 { background: url('Piquenique.png') no-repeat center center fixed; background-size: cover; }
+body.tela3 { background: url('Esportes.png') no-repeat center center fixed; background-size: cover; }
+body.tela4 { background: url('QuartoGamer.png') no-repeat center center fixed; background-size: cover; }
+body.tela5 { background: url('QuartoBagunçado.png') no-repeat center center fixed; background-size: cover; }
+body.tela6 { background: url('floresta.png') no-repeat center center fixed; background-size: cover; }
+body.tela7 { background: url('Praia.png') no-repeat center center fixed; background-size: cover; }
+body.tela8 { background: url('SalaDeAula.png') no-repeat center center fixed; background-size: cover; }
+body.tela9 { background: url('Museu.png') no-repeat center center fixed; background-size: cover; }
+body.tela10 { background: url('Cidade.png') no-repeat center center fixed; background-size: cover; }
 
-/* Estilo do cabeçalho */
-header {
-    position: absolute; /* Fica fixo no topo */
-    top: 10px; /* Mantém o cabeçalho no topo da página */
-    width: 100%;
-    display: flex;
-    justify-content: space-between; /* Alinha os botões nas extremidades */
-    padding: 0 20px;
-    box-sizing: border-box;
-    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
-}
-
-/* Contêiner dos botões */
-.button-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%; /* Garante que ocupe a largura total */
-}
-
-/* Estilo para os botões */
-.button {
-    width: 100px; /* Define o tamanho fixo para o botão */
-    height: 100px; /* Define o tamanho fixo para o botão */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Estilo das imagens e contêiner */
+/* Contêiner das imagens */
 .container {
     display: flex;
     justify-content: space-between; /* Espaço entre os grupos de imagens */
-    align-items: flex-start; /* Alinha o conteúdo ao topo */
-    gap: 50px; /* Ajusta o espaço entre os grupos de imagens */
-    padding: 120px 20px 20px; /* Adiciona espaço no topo para o cabeçalho */
+    align-items: center;
+    gap: 100px; /* Espaçamento entre os grupos de imagens */
+    flex-wrap: wrap; /* Para garantir que os itens se movam para a linha seguinte se necessário */
+    padding: 20px;
     max-width: 100%; /* Ajusta para não ultrapassar a largura da tela */
     box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
 }
@@ -84,26 +79,56 @@ header {
     border-radius: 10px;
 }
 
-/* Estilos dos popups e animações */
-#discoveryPopup, #popup {
-    position: fixed;
-    z-index: 1000;
+.image.tremble {
+    animation: shake 0.5s;
 }
 
-/* Popup de descoberta de formas */
+.image.error {
+    border-color: red;
+}
+
+.image.success {
+    border-color: green;
+}
+
+/* Animação de tremor */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+/* Estilo do popup de descoberta de formas */
 #discoveryPopup {
+    position: fixed;
     top: 10px;
     left: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* Cor preta translúcida para ser discreto */
     color: white;
     padding: 10px 20px;
     border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     display: none;
+    z-index: 1000;
     animation: fadeIn 0.5s ease-out forwards;
 }
 
-/* Popup final de conclusão */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo do popup final de conclusão */
 #popup {
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -111,6 +136,7 @@ header {
     border-radius: 30px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
     padding: 20px;
+    z-index: 1000;
     text-align: center;
 }
 
@@ -129,14 +155,33 @@ header {
     background-color: #e1cb04;
 }
 
-/* Animação de fadeIn */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Estilo para os botões de imagem */
+header {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.button-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.button {
+    width: 100px; /* Define o tamanho fixo para o botão */
+    height: 100px; /* Define o tamanho fixo para o botão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
