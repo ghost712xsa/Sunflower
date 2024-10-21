@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="StylesTelaCozinha.css"> <!-- Link para o CSS externo -->
     <title>Cozinha</title>
- <style>
+    <style>
         /* Estilo para a tela de carregamento */
         #loadingOverlay {
             position: fixed;
@@ -33,9 +33,20 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        /* Esconder o conteúdo até o carregamento das imagens */
+        .RpgTextBox, .RitaImage {
+            display: none;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Tela de carregamento -->
+    <div id="loadingOverlay">
+        <div id="loadingSpinner"></div>
+    </div>
+
     <div class="RpgTextBox" id="RpgTextBox">
         <div class="RpgText" id="RpgText"></div>
         <div class="ButtonGroup">
@@ -46,14 +57,15 @@
 
     <img src="RitaCozinheira.png" alt="RitaCozinheira" class="RitaImage" id="RitaImage">
 
-        <script>
+    <script>
         // Função para verificar se todas as imagens estão carregadas
         window.onload = function() {
             // Ocultar a tela de carregamento
             document.getElementById('loadingOverlay').style.display = 'none';
 
-            // Exibir a container com as imagens
-            document.querySelector('.container').style.display = 'block';
+            // Exibir o conteúdo
+            document.querySelector('.RpgTextBox').style.display = 'block';
+            document.querySelector('.RitaImage').style.display = 'block';
         };
     </script>
 
