@@ -1,6 +1,10 @@
 /* Estilo geral do corpo */
+
+/* Adiciona a fonte Patrick Hand */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 body.tela1 {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Patrick Hand'; /* Fonte infantil */
     text-align: center;
     margin: 0;
     padding: 0;
@@ -15,7 +19,7 @@ body.tela1 {
 
 /* Estilo para outras telas */
 body.tela2, body.tela3, body.tela4, body.tela5, body.tela6, body.tela7, body.tela8, body.tela9, body.tela10 {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Patrick Hand'; /* Fonte infantil */
     text-align: center;
     margin: 0;
     padding: 0;
