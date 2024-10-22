@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="StylesTelaEsportes.css"> <!-- Link para o CSS externo -->
-    <title>Esportes</title>
-      <style>
+    <style>
         /* Estilo para a tela de carregamento */
         #loadingOverlay {
             position: fixed;
@@ -35,12 +34,19 @@
         }
 
         /* Esconder container até que as imagens sejam carregadas */
-        .container {
+        .RpgTextBox, .RitaJogadoraImage {
             display: none;
         }
     </style>
+    <title>Esportes</title>
 </head>
 <body>
+
+    <!-- Tela de carregamento -->
+    <div id="loadingOverlay">
+        <div id="loadingSpinner"></div>
+    </div>
+
     <div class="RpgTextBox" id="RpgTextBox">
         <div class="RpgText" id="RpgText"></div>
         <div class="ButtonGroup">
@@ -49,16 +55,17 @@
         </div>
     </div>
 
-   <img src="RitaJogadora.png" alt="RitaJogadora" class="RitaJogadoraImage" id="RitaJogadoraImage"> 
+    <img src="RitaJogadora.png" alt="Rita Jogadora" class="RitaJogadoraImage" id="RitaJogadoraImage">
 
-        <script>
+    <script>
         // Função para verificar se todas as imagens estão carregadas
         window.onload = function() {
             // Ocultar a tela de carregamento
             document.getElementById('loadingOverlay').style.display = 'none';
 
-            // Exibir a container com as imagens
-            document.querySelector('.container').style.display = 'block';
+            // Exibir o conteúdo
+            document.querySelector('.RpgTextBox').style.display = 'block';
+            document.querySelector('.RitaJogadoraImage').style.display = 'block';
         };
     </script>
 
