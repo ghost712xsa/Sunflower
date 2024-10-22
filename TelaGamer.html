@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="StylesTelaGamer.css"> <!-- Link para o CSS externo -->
-        <style>
+    <style>
         /* Estilo para a tela de carregamento */
         #loadingOverlay {
             position: fixed;
@@ -34,13 +34,19 @@
         }
 
         /* Esconder container até que as imagens sejam carregadas */
-        .container {
+        .RpgTextBox, .RitaGamerImage {
             display: none;
         }
     </style>
     <title>Gamer</title>
 </head>
 <body>
+
+    <!-- Tela de carregamento -->
+    <div id="loadingOverlay">
+        <div id="loadingSpinner"></div>
+    </div>
+
     <div class="RpgTextBox" id="RpgTextBox">
         <div class="RpgText" id="RpgText"></div>
         <div class="ButtonGroup">
@@ -49,17 +55,20 @@
         </div>
     </div>
 
-    <img src="RitaGamer.png" alt="RitaGamer" class="RitaGamerImage" id="RitaGamerImage">
+    <img src="RitaGamer.png" alt="Rita Gamer" class="RitaGamerImage" id="RitaGamerImage">
+
     <script>
         // Função para verificar se todas as imagens estão carregadas
         window.onload = function() {
             // Ocultar a tela de carregamento
             document.getElementById('loadingOverlay').style.display = 'none';
 
-            // Exibir a container com as imagens
-            document.querySelector('.container').style.display = 'block';
+            // Exibir o conteúdo
+            document.querySelector('.RpgTextBox').style.display = 'block';
+            document.querySelector('.RitaGamerImage').style.display = 'block';
         };
     </script>
+
     <script src="ScriptTelaGamer.js"></script> <!-- Link para o JavaScript externo -->
 </body>
 </html>
