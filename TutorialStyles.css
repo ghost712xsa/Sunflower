@@ -1,3 +1,6 @@
+/* Adiciona a fonte Patrick Hand */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,7 +8,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Patrick Hand'; /* Fonte infantil */
     display: flex;
     justify-content: center;
     align-items: center;
