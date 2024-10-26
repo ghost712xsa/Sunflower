@@ -9,7 +9,7 @@ body {
   font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte usada: Comic Sans MS */
   margin: 0;
   padding: 0;
-  background: url('img.png') center no-repeat fixed; /* Ajusta a imagem para cobrir toda a área visível */
+  background: url('Screenshot_1.png') center no-repeat fixed; /* Ajusta a imagem para cobrir toda a área visível */
   background-size: cover;
 }
 
