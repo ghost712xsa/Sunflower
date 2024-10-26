@@ -14,7 +14,7 @@ body {
   font-family: 'Patrick Hand'; /* Fonte infantil */
   margin: 0;
   padding: 0;
-  background: url('TelaDeFundo.png') center no-repeat fixed; /* Ajusta a imagem para cobrir toda a área visível */
+  background: url('TelaDeFundo2.png') center no-repeat fixed; /* Ajusta a imagem para cobrir toda a área visível */
   background-size: cover;
 }
 
