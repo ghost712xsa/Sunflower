@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela inicial</title>
+    <link rel="stylesheet" href="StylesTela2.css">
+</head>
+<body>
+    <a href="PrimeiraTela.html"><img src="Placajogar.png" class="PlacaJogar" alt="PlacaJogar"></a>
+    <a href="tutorial.html"><img src="PlacaFases.png" class="PlacaFases" alt="PlacaFases"></a>
+    <a href="tutorial.html"><img src="PlacaTutorial.png" class="PlacaTutorial" alt="PlacaTutorial"></a>
+    
+    <img id="muteButton" class="audio-button" src="AudioAtivado.png" alt="Controle de Som"> <!-- Imagem para controlar o som -->
+
+    <script>
+        const muteButton = document.getElementById('muteButton');
+        
+        // Carregar o estado do mute ao iniciar a página
+        window.addEventListener('load', () => {
+            const isMuted = localStorage.getItem('isMuted') === 'true';
+
+            // Atualiza a imagem do botão de áudio
+            muteButton.src = isMuted ? 'AudioDesativado.png' : 'AudioAtivado.png';
+        });
+
+        // Função para alternar o estado do mute
+        muteButton.addEventListener('click', () => {
+            const isMuted = localStorage.getItem('isMuted') === 'true';
+            const newMutedState = !isMuted;
+
+            localStorage.setItem('isMuted', newMutedState); // Armazena o estado
+            muteButton.src = newMutedState ? 'AudioDesativado.png' : 'AudioAtivado.png'; // Atualiza a imagem
+        });
+    </script>
+</body>
+</html>
